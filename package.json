@@ -9,7 +9,8 @@
     "app",
     "dynamic",
     "icon",
-    "app-icon"
+    "app-icon",
+    "alternate"
   ],
   "main": "index.js",
   "repository": {
