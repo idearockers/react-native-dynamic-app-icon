@@ -1,7 +1,7 @@
 
 # React Native Dynamic App Icon
 
-Since iOS 10.3 Apple supports alternate App Icons to be set programatically. This package integrates this functionality as React Native module. Android is not (yet?) supported.
+Since iOS 10.3 Apple supports alternate App Icons to be set programmatically. This package integrates this functionality as React Native module. Android is not (yet?) supported.
 
 ## Table of Contents
 
@@ -36,7 +36,7 @@ Alternate icons have to be placed directly in your Xcode project rather than ins
 
 ### Adjust `info.plist`
 
-Copy the following to your `info.plist` and adjust it as needed. The omit the file extension (and `@2x`) part, Xcode will pick them accordingly. You can add more alternate icons by adding more items to the `alternate` dict.
+Copy the following to your `info.plist` and adjust it as needed. Omit the file extension (and `@2x`) part, Xcode will pick them accordingly. You can add more alternate icons by adding more items to the `alternate` dict.
 
 ```
 <key>CFBundleIcons</key>
