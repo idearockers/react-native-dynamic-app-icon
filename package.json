@@ -1,0 +1,19 @@
+
+{
+  "name": "react-native-dynamic-app-icon",
+  "version": "1.0.0",
+  "description": "Programatically change the app icon with React Native.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idearockers/react-native-dynamic-app-icon.git"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "idearockers <lars@idearockers.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  }
+}
