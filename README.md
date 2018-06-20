@@ -36,7 +36,7 @@ Alternate icons have to be placed directly in your Xcode project rather than ins
 
 ### Adjust `info.plist`
 
-Copy the following to your `info.plist` and adjust it as needed. Omit the file extension (and `@2x`) part, Xcode will pick them accordingly. You can add more alternate icons by adding more items to the `alternate` dict.
+Copy the following to your `info.plist` and adjust it as needed. Omit the file extension (and `@2x`) part, Xcode will pick them accordingly. You can add more alternate icons by copying the an alternate block.
 
 ```
 <key>CFBundleIcons</key>
@@ -44,14 +44,23 @@ Copy the following to your `info.plist` and adjust it as needed. Omit the file e
   <key>CFBundleAlternateIcons</key>
   <dict>
     <key>alternate</key>
-    <dict>
-      <key>CFBundleIconFiles</key>
-      <array>
-        <string>ALTERNATE_FILENAME</string>
-      </array>
-      <key>UIPrerenderedIcon</key>
-      <false/>
-    </dict>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon_alternate</string>
+        </array>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+      </dict>
+      <key>alternate2</key>
+      <dict>
+        <key>CFBundleIconFiles</key>
+        <array>
+          <string>AppIcon_alternate2</string>
+        </array>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+      </dict>
     <key>CFBundlePrimaryIcon</key>
     <dict>
       <key>CFBundleIconFiles</key>
@@ -68,14 +77,14 @@ Copy the following to your `info.plist` and adjust it as needed. Omit the file e
 ```javascript
 import AppIcon from 'react-native-dynamic-app-icon';
 
-AppIcon.setAppIcon('filename');
+AppIcon.setAppIcon('alternate');
 ```
 
 ## Api
 
-### setAppIcon(filename: string)
+### setAppIcon(key: string)
 
-To change the app icon call this method with one of the filenames specified in your `plist.info`. To reset to the default app icon pass `null`.
+To change the app icon call this method with one of the alternate app icons keys specified in your `plist.info`. To reset to the default app icon pass `null`.
 
 ### supportsDynamicAppIcon()
 
