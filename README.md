@@ -78,6 +78,10 @@ Copy the following to your `info.plist` and adjust it as needed. Omit the file e
 import AppIcon from 'react-native-dynamic-app-icon';
 
 AppIcon.setAppIcon('alternate');
+
+AppIcon.getIconName(result => {
+  alert( 'Icon name: ' + result.iconName );
+});
 ```
 
 ## Api
@@ -89,6 +93,10 @@ To change the app icon call this method with one of the alternate app icons keys
 ### supportsDynamicAppIcon()
 
 Returns a promise which resolves to a boolean.
+
+### getIconName(callback(result))
+
+Returns a callback with an object containing the icon name. Example: `{iconName: 'default'}`.
 
 ## License
 
